@@ -1,0 +1,46 @@
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Create User', 'create-user', '2022-07-22 19:00:00-05', '2022-07-22 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Update User', 'update-user', '2022-07-22 19:00:00-05', '2022-07-22 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('View User', 'view-user', '2022-07-22 19:00:00-05', '2022-07-22 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('List User', 'list-user', '2022-07-22 19:00:00-05', '2022-07-22 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Delete User', 'delete-user', '2022-07-22 19:00:00-05', '2022-07-22 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Changed Password', 'changed-password', '2022-07-22 19:00:00-05', '2022-07-22 19:00:00-05');
+
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('List Rol', 'list-rol', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Create Profile', 'create-profile', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Update Profile', 'update-profile', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('View Profile', 'view-profile', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('List Profile', 'list-profile', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Delete Profile', 'delete-profile', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('View Bible', 'view-bible', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Create Will', 'create-will', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Update Will', 'update-will', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('View Will', 'view-will', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('List Will', 'list-will', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Delete Will', 'delete-will', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Create Book', 'create-book', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Update Book', 'update-book', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('View Book', 'view-book', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('List Book', 'list-book', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Delete Book', 'delete-book', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Create Chapter', 'create-chapter', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Update Chapter', 'update-chapter', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('View Chapter', 'view-chapter', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('List Chapter', 'list-chapter', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Delete Chapter', 'delete-chapter', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Create Verse', 'create-verse', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Update Verse', 'update-verse', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('View Verse', 'view-verse', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('List Verse', 'list-verse', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+INSERT INTO public."Roles"(name, code, "createdAt", "updatedAt") VALUES ('Delete Verse', 'delete-verse', '2021-06-24 19:00:00-05', '2021-06-24 19:00:00-05');
+
+
+
+INSERT INTO public.profiles(name, roles, "status", "createdBy", "updatedBy", "createdAt", "updatedAt") VALUES ('Administrator', '{create-user,update-user,view-user,delete-user}', 'ACTIVE', '{"_id":1, "email":"system@digitalsoft.com"}', '{"_id":1, "email":"system@digitalsoft.com"}', '2022-07-22 15:10:03.296-05', '2022-07-22 15:10:03.296-05');
+
+INSERT INTO public.users("firstName", "lastName", email, password, profile, "status", "createdBy", "updatedBy", "createdAt", "updatedAt") VALUES ('Admin', 'System', 'system@digitalsoft.com', '$2b$10$hmKWxohbL5dVH2.Y5xLy9e6cqvs1RLiHf/HXwq9JrWqyG.J6aAfVe', 1, 'ACTIVE', '{"_id":1, "email":"system@digitalsoft.com"}', '{"_id":1, "email":"system@digitalsoft.com"}',  '2022-07-22 15:10:03.296-05', '2022-07-22 15:10:03.296-05');

@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  api_digitalsoft:
+    image: api_digitalsoft
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      
+    ports: 
+      - '8443:8443'
+    entrypoint: ["/bin/bash", "run.sh"]
