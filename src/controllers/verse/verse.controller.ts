@@ -273,7 +273,7 @@ class VerseController {
             }
 
             if (!findDataChapter) {
-                return next(new Response404(Info.CHAPTER_NOT_FOUND));
+                return next(new Response404(Info.CHAPTER_NOT_FOUND)); 
             }
             let dataChapter = findDataChapter['dataValues'];
             dataChapter.value = dataChapter._id;
