@@ -8,16 +8,15 @@
 
 import * as bcrypt from 'bcrypt';
 import * as express from 'express';
-import { Controller } from '../../interfaces/index';
+import { Controller } from '../../interfaces';
 import { User as UserModel, Profiles as ProfileModel, Roles as RolesModel } from '../../modelsSequelize';
-import LogInDto from '../../dto/authentication/logIn.dto';
+import { LogInDto } from '../../dto/authentication';
 import { Op } from 'sequelize';
-import { Session } from '../../helpers/lSession';
-import { Info } from '../../helpers/global';
-import { createTokenAdmin, validationMiddleware } from '../../middleware/index';
+import { Info, Session } from '../../helpers';
+import { createTokenAdmin, validationMiddleware } from '../../middleware';
 import { Response200, Response404, Response501 } from '../../exceptions'
 
-class AuthenticationController implements Controller {
+export class AuthenticationController implements Controller {
     public path = '/auth';
     public router = express.Router();
 
@@ -72,5 +71,3 @@ class AuthenticationController implements Controller {
         }
     }
 }
-
-export default AuthenticationController;

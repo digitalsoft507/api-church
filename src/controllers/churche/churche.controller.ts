@@ -7,15 +7,14 @@
  */
 
 import * as express from 'express';
-import { RequestWithUser, Churche as ChurcheInterface, Country as CountryInterface, Province as ProvinceInterface } from '../../interfaces/index';
+import { RequestWithUser, Churche as ChurcheInterface, Country as CountryInterface, Province as ProvinceInterface } from '../../interfaces';
 import { Churche as ChurcheModel, Country as CountryModel, Province as ProvinceModel } from '../../modelsSequelize';
-import { validationMiddleware, authMiddleware } from '../../middleware/index';
+import { validationMiddleware, authMiddleware } from '../../middleware';
 import { CreateDto, UpdateDto, DeleteDto, FindDto, FindByIdDto } from '../../dto/churche';
-import { Info } from '../../helpers/global';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
+import { Info, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
-class ChurcheController {
+export class ChurcheController {
     public path = '/churchs';
     public router = express.Router();
 
@@ -186,5 +185,3 @@ class ChurcheController {
         }
     }
 }
-
-export default ChurcheController;

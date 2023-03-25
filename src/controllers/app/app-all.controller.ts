@@ -21,7 +21,7 @@ import {
     Teaching as TeachingInterface,
     Verse as VerseReadInterface,
     Cult as CultInterface
-} from '../../interfaces/index';
+} from '../../interfaces';
 import {
     Will as WillModel,
     Book as BookModel,
@@ -37,7 +37,7 @@ import {
     Cult as CultModel,
 } from '../../modelsSequelize';
 
-import { validationMiddleware , appAuthMiddleware} from '../../middleware/index';
+import { validationMiddleware , appAuthMiddleware} from '../../middleware';
 
 import { FindDto as WillFindDto } from '../../dto/will';
 import { FindDto as BookFindDto } from '../../dto/book';
@@ -51,10 +51,8 @@ import { FindDto as PreacherFindDto } from '../../dto/preacher';
 import { FindDto as TeachingFindDto } from '../../dto/teaching';
 import { CreateDto as VerseReadCreateDto } from '../../dto/verse-read';
 
-import { Info } from '../../helpers/global';
-import { formatDate } from '../../helpers/formatDate';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
+import { Info, formatDate, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
 export class AppAllController {
     public path = '/app';
@@ -65,16 +63,16 @@ export class AppAllController {
     }
 
     public intializeRoutes() {
-        this.router.get(`${this.path}/wills/list`, appAuthMiddleware, validationMiddleware(WillFindDto), this.listWills);
-        this.router.get(`${this.path}/books/list`, appAuthMiddleware, validationMiddleware(BookFindDto), this.listBooks);
-        this.router.get(`${this.path}/chapters/list`, appAuthMiddleware, validationMiddleware(ChapterFindDto), this.listChapters);
-        this.router.get(`${this.path}/verses/list`, appAuthMiddleware, validationMiddleware(VerseFindDto), this.listVerses);
-        this.router.get(`${this.path}/countrys/list`, appAuthMiddleware, validationMiddleware(CountryFindDto), this.listCountrys);
-        this.router.get(`${this.path}/provinces/list`, appAuthMiddleware, validationMiddleware(ProvinceFindDto), this.listProvinces);
-        this.router.get(`${this.path}/churchs/list`, appAuthMiddleware, validationMiddleware(ChurcheFindDto), this.listChurches);
-        this.router.get(`${this.path}/charges/list`, appAuthMiddleware, validationMiddleware(ChargeFindDto), this.listCharges);
-        this.router.get(`${this.path}/preachers/list`, appAuthMiddleware, validationMiddleware(PreacherFindDto), this.listPreachers);
-        this.router.get(`${this.path}/teachings/list`, appAuthMiddleware, validationMiddleware(TeachingFindDto), this.listTeachings);
+        this.router.post(`${this.path}/wills/list`, appAuthMiddleware, validationMiddleware(WillFindDto), this.listWills);
+        this.router.post(`${this.path}/books/list`, appAuthMiddleware, validationMiddleware(BookFindDto), this.listBooks);
+        this.router.post(`${this.path}/chapters/list`, appAuthMiddleware, validationMiddleware(ChapterFindDto), this.listChapters);
+        this.router.post(`${this.path}/verses/list`, appAuthMiddleware, validationMiddleware(VerseFindDto), this.listVerses);
+        this.router.post(`${this.path}/countrys/list`, appAuthMiddleware, validationMiddleware(CountryFindDto), this.listCountrys);
+        this.router.post(`${this.path}/provinces/list`, appAuthMiddleware, validationMiddleware(ProvinceFindDto), this.listProvinces);
+        this.router.post(`${this.path}/churchs/list`, appAuthMiddleware, validationMiddleware(ChurcheFindDto), this.listChurches);
+        this.router.post(`${this.path}/charges/list`, appAuthMiddleware, validationMiddleware(ChargeFindDto), this.listCharges);
+        this.router.post(`${this.path}/preachers/list`, appAuthMiddleware, validationMiddleware(PreacherFindDto), this.listPreachers);
+        this.router.post(`${this.path}/teachings/list`, appAuthMiddleware, validationMiddleware(TeachingFindDto), this.listTeachings);
 
         this.router.post(`${this.path}/verse-read/register`, appAuthMiddleware, validationMiddleware(VerseReadCreateDto), this.RegisterVerseRead);
 
@@ -92,7 +90,7 @@ export class AppAllController {
             if (findData && findData.length <= 0) {
                 return next(new Response404(Info.WILLS_NOT_FOUND));
             }
-
+            
             return response.send(new Response200(Info.WILLS_LIST, findData));
         } catch (ex: any) {
             return next(new Response501(`${Info.SERVER_ERROR_INERNAL} - ${ex.message}`));

@@ -42,14 +42,14 @@ class App {
     }
 
     public listen() {
-        /* https.createServer({
+        /*https.createServer({
             key: fs.readFileSync('./cert/private.pem'),
             cert: fs.readFileSync('./cert/certificate.crt'),
             ca: fs.readFileSync('./cert/ca_bundle.crt'),
             passphrase: '12345678'
         }, this.app).listen(this.port, () => {
             console.log(`Api Backend DigitalSoft listening on https://localhost:${this.port}`);
-        }); */
+        });*/
 
         this.app.listen(this.port, () => {
             console.log(`Api Backend DigitalSoft listening on http://localhost:${this.port}`);

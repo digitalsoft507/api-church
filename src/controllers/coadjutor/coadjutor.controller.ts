@@ -8,15 +8,14 @@
 
 import * as bcrypt from 'bcrypt';
 import * as express from 'express';
-import { validationMiddleware, authMiddleware } from '../../middleware/index';
-import { Controller, RequestWithUser, Coadjutor as CoadjutorInterface } from 'interfaces/index';
+import { validationMiddleware, authMiddleware } from '../../middleware';
+import { Controller, RequestWithUser, Coadjutor as CoadjutorInterface } from 'interfaces';
 import { Coadjutor as CoadjutorModel } from '../../modelsSequelize';
 import { CreateDto, UpdateDto, DeleteDto, FindDto, FindByIdDto, ChangePasswordDto } from '../../dto/coadjutor';
-import { Info } from '../../helpers/global';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
+import { Info, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
-class CoadjutorController implements Controller {
+export class CoadjutorController implements Controller {
     public path = '/coadjutors';
     public router = express.Router();
 
@@ -195,5 +194,3 @@ class CoadjutorController implements Controller {
         }
     }
 }
-
-export default CoadjutorController;

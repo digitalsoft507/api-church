@@ -7,15 +7,14 @@
  */
 
 import * as express from 'express';
-import { RequestWithUser, Teaching as TeachingInterface } from '../../interfaces/index';
+import { RequestWithUser, Teaching as TeachingInterface } from '../../interfaces';
 import { Teaching as TeachingModel } from '../../modelsSequelize';
-import { validationMiddleware, authMiddleware } from '../../middleware/index';
+import { validationMiddleware, authMiddleware } from '../../middleware';
 import { CreateDto, UpdateDto, DeleteDto, FindDto, FindByIdDto } from '../../dto/teaching';
-import { Info } from '../../helpers/global';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
+import { Info, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
-class TeachingController {
+export class TeachingController {
     public path = '/teachings';
     public router = express.Router();
 
@@ -162,5 +161,3 @@ class TeachingController {
         }
     }
 }
-
-export default TeachingController;

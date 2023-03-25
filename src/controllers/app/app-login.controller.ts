@@ -8,12 +8,11 @@
 
 import * as bcrypt from 'bcrypt';
 import * as express from 'express';
-import { Controller } from '../../interfaces/index';
+import { Controller } from '../../interfaces';
 import { Coadjutor as CoadjutorModel } from '../../modelsSequelize';
-import LogInDto from '../../dto/authentication/logIn.dto';
-import { Session } from '../../helpers/lSession';
-import { Info } from '../../helpers/global';
-import { createTokenCoadjutor, validationMiddleware } from '../../middleware/index';
+import {LogInDto} from '../../dto/authentication';
+import { Info, Session } from '../../helpers';
+import { createTokenCoadjutor, validationMiddleware } from '../../middleware';
 import { Response200, Response404, Response501 } from '../../exceptions'
 
 export class AppLoginController implements Controller {

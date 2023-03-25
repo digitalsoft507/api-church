@@ -8,15 +8,14 @@
 
 import * as bcrypt from 'bcrypt';
 import * as express from 'express';
-import { validationMiddleware, authMiddleware } from '../../middleware/index';
-import { Controller, RequestWithUser, User as UserInterface } from 'interfaces/index';
+import { validationMiddleware, authMiddleware } from '../../middleware';
+import { Controller, RequestWithUser, User as UserInterface } from 'interfaces';
 import { Profiles as ProfilModel, User as UserModel } from '../../modelsSequelize';
 import { CreateDto, UpdateDto, DeleteDto, FindDto, FindByIdDto, ChangePasswordDto } from '../../dto/users';
-import { Info } from '../../helpers/global';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
+import { Info, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
-class UserController implements Controller {
+export class UserController implements Controller {
     public path = '/user';
     public router = express.Router();
 
@@ -250,5 +249,3 @@ class UserController implements Controller {
         }
     }
 }
-
-export default UserController;

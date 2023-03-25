@@ -7,15 +7,14 @@
  */
 
 import * as express from 'express';
-import { RequestWithUser, Chapter as ChapterInterface, Will as WillInterface, Book as BookInterface } from '../../interfaces/index';
+import { RequestWithUser, Chapter as ChapterInterface, Will as WillInterface, Book as BookInterface } from '../../interfaces';
 import { Chapter as ChapterModel, Will as WillModel, Book as BookModel } from '../../modelsSequelize';
-import { validationMiddleware, authMiddleware } from '../../middleware/index';
+import { validationMiddleware, authMiddleware } from '../../middleware';
 import { CreateDto, UpdateDto, DeleteDto, FindDto, FindByIdDto } from '../../dto/chapter';
-import { Info } from '../../helpers/global';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
+import { Info, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
-class ChapterController {
+export class ChapterController {
     public path = '/chapters';
     public router = express.Router();
 
@@ -202,5 +201,3 @@ class ChapterController {
         }
     }
 }
-
-export default ChapterController;

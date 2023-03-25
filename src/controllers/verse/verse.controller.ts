@@ -7,16 +7,14 @@
  */
 
 import * as express from 'express';
-import { RequestWithUser, Verse as VerseInterface, Chapter as ChapterInterface, Will as WillInterface, Book as BookInterface } from '../../interfaces/index';
+import { RequestWithUser, Verse as VerseInterface, Chapter as ChapterInterface, Will as WillInterface, Book as BookInterface } from '../../interfaces';
 import { Verse as VerseModel, Chapter as ChapterModel, Will as WillModel, Book as BookModel } from '../../modelsSequelize';
-import { validationMiddleware, authMiddleware } from '../../middleware/index';
+import { validationMiddleware, authMiddleware } from '../../middleware';
 import { CreateDto, UpdateDto, DeleteDto, FindDto, FindByIdDto } from '../../dto/verse';
-import { Info } from '../../helpers/global';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
-import { biblieServices } from '../../services';
+import { Info, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
-class VerseController {
+export class VerseController {
     public path = '/verses';
     public router = express.Router();
 
@@ -362,5 +360,3 @@ class VerseController {
         }
     }
 }
-
-export default VerseController;

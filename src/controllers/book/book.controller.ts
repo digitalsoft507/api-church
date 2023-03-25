@@ -7,15 +7,14 @@
  */
 
 import * as express from 'express';
-import { Controller, RequestWithUser, Book as BookInterface, Will as WillInterface } from '../../interfaces/index';
+import { Controller, RequestWithUser, Book as BookInterface, Will as WillInterface } from '../../interfaces';
 import { Book as BookModel, Will as WillModel } from '../../modelsSequelize';
-import { validationMiddleware, authMiddleware } from '../../middleware/index';
+import { validationMiddleware, authMiddleware } from '../../middleware';
 import { CreateDto, UpdateDto, DeleteDto, FindDto, FindByIdDto } from '../../dto/book';
-import { Info } from '../../helpers/global';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
+import { Info, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
-class BookController implements Controller {
+export class BookController implements Controller {
     public path = '/books';
     public router = express.Router();
 
@@ -195,5 +194,3 @@ class BookController implements Controller {
         }
     }
 }
-
-export default BookController;

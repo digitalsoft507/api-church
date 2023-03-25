@@ -7,16 +7,14 @@
  */
 
 import * as express from 'express';
-import { validationMiddleware, authMiddleware } from '../../middleware/index';
+import { validationMiddleware, authMiddleware } from '../../middleware';
 import { CreateDto, UpdateDto, FindDto, FindByIdDto, RolFindDto, DeleteDto } from '../../dto/profiles';
 import { Profiles as ProfilModel, Roles as RolModel } from '../../modelsSequelize';
-import { Controller, RequestWithUser, Profile as ProfileInterface, Rol as RolInterface } from '../../interfaces/index';
-import { Info } from '../../helpers/global';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
-import { Op } from 'sequelize';
+import { Controller, RequestWithUser, Profile as ProfileInterface, Rol as RolInterface } from '../../interfaces';
+import { Info, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
-class ProfileController implements Controller {
+export class ProfileController implements Controller {
     public path = '/profile';
     public router = express.Router();
 
@@ -204,5 +202,3 @@ class ProfileController implements Controller {
         }
     }
 }
-
-export default ProfileController;

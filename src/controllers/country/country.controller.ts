@@ -7,15 +7,14 @@
  */
 
 import * as express from 'express';
-import { RequestWithUser, Country as CountryInterface } from '../../interfaces/index';
+import { RequestWithUser, Country as CountryInterface } from '../../interfaces';
 import { Country as CountryModel } from '../../modelsSequelize';
-import { validationMiddleware, authMiddleware } from '../../middleware/index';
+import { validationMiddleware, authMiddleware } from '../../middleware';
 import { CreateDto, UpdateDto, DeleteDto, FindDto, FindByIdDto } from '../../dto/country';
-import { Info } from '../../helpers/global';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
+import { Info, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
-class CountryController {
+export class CountryController {
     public path = '/countrys';
     public router = express.Router();
 
@@ -166,5 +165,3 @@ class CountryController {
         }
     }
 }
-
-export default CountryController;

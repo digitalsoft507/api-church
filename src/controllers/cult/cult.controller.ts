@@ -7,15 +7,14 @@
  */
 
 import * as express from 'express';
-import { RequestWithUser, Cult as CultInterface, Country as CountryInterface, Province as ProvinceInterface, Churche as ChurcheInterface, Teaching as TeachingInterface } from '../../interfaces/index';
+import { RequestWithUser, Cult as CultInterface, Country as CountryInterface, Province as ProvinceInterface, Churche as ChurcheInterface, Teaching as TeachingInterface } from '../../interfaces';
 import { Cult as CultModel, Country as CountryModel, Province as ProvinceModel, Churche as ChurcheModel, Teaching as TeachingModel } from '../../modelsSequelize';
-import { validationMiddleware, authMiddleware } from '../../middleware/index';
+import { validationMiddleware, authMiddleware } from '../../middleware';
 import { CreateDto, UpdateDto, DeleteDto, FindDto, FindByIdDto } from '../../dto/cult';
-import { Info } from '../../helpers/global';
-import { GetWhere } from '../../helpers/functionDb';
-import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions/index';
+import { Info, GetWhere } from '../../helpers';
+import { Response200, Response404, Response501, AlreadyExistsException } from '../../exceptions';
 
-class CultController {
+export class CultController {
     public path = '/cults';
     public router = express.Router();
 
@@ -225,5 +224,3 @@ class CultController {
         }
     }
 }
-
-export default CultController;
